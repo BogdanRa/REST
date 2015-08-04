@@ -3,7 +3,7 @@ from redmine import Redmine
 
 redmine = Redmine('http://redmine.bintime.com', key='' )
 
-# issue_id = 11575
+
 time_entries_str = '''18350|2015-08-03|1,0|testing
 18010|2015-07-30|1,0|testing
 '''
