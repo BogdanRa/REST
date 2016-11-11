@@ -4,9 +4,9 @@ from redmine import Redmine
 redmine = Redmine('http://redmine.bintime.com', key='' )
 
 
-time_entries_str = '''18350|2015-08-03|1,0|testing
-18010|2015-07-30|1,0|testing
-'''
+time_entries_str = '''18350|2016-10-01|1,0|testing
+18010|2016-11-01|1,0|testing
+''' 
 
 def time_entry_parse(time_entry):
     time_entry_tmp = {}
