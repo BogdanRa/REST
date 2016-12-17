@@ -9,12 +9,12 @@ cote = Catsfact()
 
 SMT_server = "smtp.gmail.com"
 SM_port = 587
-SMTP_username = "futurumshop123@gmail.com"
-SMTP_password = "admiralxoxol123"
+SMTP_username = "user@gmail.com"
+SMTP_password = "user123"
 
-sender = 'futurumshop123@gmail.com'
-#receivers = ['4ezara@gmail.com', 'pryadun_olya@ukr.net']
-receivers = ['radchenko_bogdan@ukr.net', 'radchenkobodya@gmail.com', 'nastya_pryadun@ukr.net']
+sender = 'user@gmail.com'
+
+receivers = ['user1@ukr.net', 'user2@gmail.com', 'user3@ukr.net']
 
 
 message="""From: Moor moor Ko.
