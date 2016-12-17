@@ -1,0 +1,5 @@
+#I know this file in public repository, but it's just test file. Everything is ok.
+base_url: 'http://codespace-api.myjetbrains.com/youtrack/rest'
+credentials:
+  login: 'root'
+  psswd: 'c11desp@ce'
