@@ -1,0 +1,47 @@
+import urllib
+import json
+
+
+#Check your location
+def location(): 
+    location_point = "http://api.sypexgeo.net/json/"
+    json_d = urllib.urlopen(location_point).read()
+    city_data = json.loads(json_d)
+    ip_address = city_data['ip'] 
+    city = city_data['city']['name_en']
+    return str(ip_address), str(city)
+
+
+#Get weather
+def get_weather(ip_address):  
+    
+    end_point = "http://api.worldweatheronline.com/free/v1/weather.ashx?" 
+    query = "key=a37fae643df77aa83d88abbc9e8e96194ab242d4&q=" + ip_address + "&num_of_days=0&format=json"
+    url = end_point + query
+    json_data = urllib.urlopen(url).read()
+    data = json.loads(json_data)
+    current_weather = data['data']['current_condition'][0]
+    return current_weather	
+
+
+
+def print_weather(data, city):
+    print city,  """
+    Weather : %s 
+    Temperatue : %s Celsius
+    Wind : %s Kmph %s 
+    Humidity : %s 
+    Precipitation : %s MM
+	
+    """ % (data['weatherDesc'][0]['value'], data['temp_C'], data['windspeedKmph'], data['winddir16Point'], data['humidity'], data['precipMM'])
+
+
+def main():
+    print "\nGetting weather information for your location..."
+    ip = location()
+    data = get_weather(ip[0])    
+    print_weather(data, ip[1])
+    
+
+if __name__ == "__main__":
+    main()
